@@ -46,7 +46,7 @@ this._parentElement.insertAdjacentHTML("beforebegin", errorHtml);
   }
   addHandlerRender(handler) {
     //
-    let events = ["hashchange",'load'];
+    let events = ["hashchange"];
     events.forEach((element) => window.addEventListener(element, handler));
   }
 
