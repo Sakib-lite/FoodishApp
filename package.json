@@ -2,19 +2,29 @@
   "name": "tailwind-full",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/index.html",
   "scripts": {
-    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
-    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
+    "deploy": "gh-pages -d public",
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css  parcel build --public/index.html",
+    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch",
+    "start": "parcel public/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "http://sakib-lite.github.io/Foodish_App",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@tailwindcss/line-clamp": "^0.2.0",
     "autoprefixer": "^10.2.5",
+    "core-js": "^3.12.1",
+    "fractional": "^1.0.0",
+    "gh-pages": "^3.1.0",
     "postcss-cli": "^8.3.1",
+    "regenerator-runtime": "^0.13.7",
     "tailwindcss": "^2.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
   }
 }

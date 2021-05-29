@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Foodish Recipe App </title>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="build/tailwind.css">
+     <script type='module' defer src="src/js/controller.js"></script>
+     
+</head>
+<body>
+
+<div class="w-full h-cus95 bg-gradient-to-r from-green-500 to-blue-300 relative">
+
+<!-- container div starts -->
+<div class="lg:w-10/12 h-cus90 bg-white  absolute lg:ml-28 lg:my-16 rounded-lg sm:w-11/12 sm:ml-8 sm:my-8 w-10/12 ml-10 my-6">
+<!-- nav bar -->
+<div class="nav w-full lg:h-28 bg-gray-100 rounded-lg flex md:h-24 sm:h-16 h-12">
+<img src="src/img/logo.png" alt="" class="lg:w-64 rounded-lg md:w-52 sm:w-40 w-32">
+<!-- Search box -->
+<div class="search_div lg:mt-6  flex relative lg:ml-10 sm:mt-2 sm:ml-3 md:mt-8 md:ml-6 mt-1 ml-2">
+
+  <input type="text" class="search_value lg:w-cus25 lg:h-16 md:w-48 sm:w-44  sm:h-8 rounded-l-full rounded-r-full  focus:outline-none lg:text-2xl text-red-400  font-mono focus:bg-gray-200 sm:text-sm  text-xs w-46 h-8 " type="text" value="pizza" placeholder="">
+
+  <div class="absolute right-0">
+  <button class="search_btn btn bg-gradient-to-r from-green-500 to-blue-300 rounded-l-full rounded-r-full lg:h-16 lg:w-48 sm:w-24 sm:h-8 w-20 h-8 sm:items-center">
+  <div class="flex md:items-center lg:ml-5 lg:mt-2 sm:ml-1 ml-0  sm:mb-6 ">
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6  hidden lg:block lg:text-xl   " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+    </svg>
+    <span class="lg:text-xl  sm:text-xs  text-xs">Search</span>
+
+  </div> 
+  
+  </button>
+</div>
+</div>
+<!-- recipe and bookmark -->
+<!-- <div class="flex lg:ml-20 lg:mt-10 sm:ml-4 sm:mt-3 mt-2 ml-2 md:mt-9">
+
+  <div class="">
+    <a href="" class="flex hover:opacity-100 opacity-80">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      <p class="uppercase  lg:text-lg sm:text-sm text-xs ">Add recipe</p>
+    </a>
+  </div>
+
+  <div class="lg:ml-5 lg:h-28 sm:ml-1 sm:h-16">
+    <a href="" class="flex hover:opacity-100 opacity-80">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+      </svg>
+      <p class="uppercase lg:text-lg sm:text-sm  text-xs ">Bookmarks</p>
+    </a>
+  </div>
+</div> -->
+
+
+</div>
+
+<div class="flex sm:w-full">
+  <!-- left div  -->
+
+  <div class="left  md:w-5/12 h-cus83  sm:w-3/12">
+    <div class="left-div  relative">
+      <div class="left-first-empty-div"> <h1 class="lg:mx-8 mt-16 lg:text-xl font-semibold text-sm sm:mx-1">Search Recipe for cooking</h1></div>
+       <!-- overflow-auto h-cus60 --> 
+    <ul class="search_list lg:space-y-1 w-full sm:space-y-1 ">
+    <!-- <li class="search-empty-list"></li> -->
+      <!-- <li class="search-item">
+       <a href="#5ed6604591c37cdc054bcc3e" class="search-a flex bg-gray-100 transform duration-500 hover:-translate-y-1 lg:py-4 sm:py-2">
+
+        <div class="lg:ml-6 sm:ml-0">
+          <img src="src/img/444 (2).jpg" alt="" class='lg:w-16 rounded-full sm:w-12'>
+          
+          
+                  </div>
+                  <div class="lg:ml-4 w-48 sm:ml-1">
+          <p class="uppercase text-transparent bg-gradient-to-r bg-clip-text from-green-600  to-blue-600 opacity-80 font-medium font-mono line-clamp-1 sm:text-sm lg:text-xl">Biriyani </p>
+          <p class="capitalize text-xs mt-1 opacity-80 font-semibold ">Sakibul Anwar</p>
+          
+                  </div>
+                  <div class="ml-auto lg:mr-6 lg:mt-4 sm:mr-0 sm:mt-1">
+          
+                    <svg xmlns="http://www.w3.org/2000/svg" class="lg:h-6 lg:w-6  text-red-400 sm:w-3 sm:h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+       </a>
+      </li> -->
+    
+      
+    </ul>
+
+<!-- page button -->
+<div class="pagination absolute -bottom-20 flex">
+ 
+</div>
+
+</div>
+
+  </div>
+
+
+  <!-- right div  -->
+  <div class="right md:w-full h-cus83 rounded-lg   bg-gray-200 sm:w-9/12 relative">
+    
+  <!-- <img src="src/img/load-icon-png-7944.png" alt="" class="loader absolute top-40 left-72 motion-safe:animate-spin  w-36 "> -->
+<div class="right-first-empty-div"> <h1 class="lg:mx-44 mt-48 lg:text-3xl font-semibold text-sm sm:mx-32">Search Recipe for cooking</h1></div>
+<!-- js element -->
+
+<!-- 
+  <div class="right-element-div">
+<div class="">
+<div class="recipe-img-tittle relative">
+  <img src="src/img/284.jpg" alt="" class="md:h-96 sm:h-60 w-full ">
+    <p class='md:text-4xl text-white bg-gradient-to-r from-green-500 to-blue-300 md:w-56 sm:w-48 py-4  transform -skew-x-12 absolute -bottom-8 left-1/3 sm:text-xl'>Recipe-Name</p>
+</div> 
+<div class="my-20 "> </div>
+<div class="flex relative mt-20 md:ml-11 sm:ml-1">
+  <div class="flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="md:h-10 md:w-10 sm:h-6 sm:w-6 text-yellow-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <p class="md:text-2xl sm:text-lg">60 <span class='opacity-80'>Minutes</span></p>
+  </div>
+  <div class="flex md:ml-11 sm:ml-6 items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="md:h-10 md:w-10 sm:h-6 sm:w-6  text-yellow-700" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+    </svg>
+    <p class="md:text-2xl sm:text-lg">4 <span class="opacity-80">Servings</span></p>
+  </div>
+
+  <div class="flex ml-10">
+   <a href="" class="transform hover:scale-110"> <svg xmlns="http://www.w3.org/2000/svg" class="md:h-10 md:w-10 sm:h-6 sm:w-6  text-yellow-700" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+    </svg></a>
+  <a href="" class="transform hover:scale-110">  <svg xmlns="http://www.w3.org/2000/svg" class="md:h-10 md:w-10 sm:h-6 sm:w-6  text-yellow-700" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+    </svg></a>
+  </div>
+
+  <div class="ml-auto transform hover:scale-110">
+ <a href="" class="">   <svg xmlns="http://www.w3.org/2000/svg" class="md:h-10 md:w-10 sm:h-6 sm:w-6  text-yellow-700" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+    </svg></a>
+  </div>
+</div>
+
+<div class="md:mt-36 sm:mt-16">
+  <p class='uppercase md:mx-64 sm:mx-32  md:text-transparent bg-gradient-to-r bg-clip-text from-red-600 md:text-2xl sm:text-lg to-blue-600'>Recipe ingredients</p>
+  <div class="">
+    <ul class='flex flex-wrap '>
+      <li class='flex gap-2 py-4 mr-auto ml-4'>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+<span class="ingredients-quantity">1000 </span>
+<span class="ingredients-unit"> g </span>
+<span class="ingredients-description "> Lorem ipsum dolor, sit amet </span>
+
+      </li>
+      <li class='flex gap-2 py-4 mr-auto ml-4'>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+<span class="ingredients-quantity">1000 </span>
+<span class="ingredients-unit"> g </span>
+<span class="ingredients-description "> Lorem ipsum dolor, sit amet </span>
+
+      </li>
+      
+    </ul>
+
+  </div>
+</div>
+</div>
+
+<div class=" absolute bottom-36 ">
+  <div class="relative">
+    <p class='uppercase md:mx-64 sm:mx-32  text-transparent bg-gradient-to-r bg-clip-text from-red-600 text-2xl to-blue-600'>How to cook</p>
+  </div>
+  <div class="">
+
+    <p class="text-center text-xl opacity-90 font-mono
+     mt-11">This recipe was carefully designed and tested by Simply Recipes. Please check out directions at their website.</p>
+  </div>
+  <div class="absolute left-60 mt-10">
+<button class='btn bg-gradient-to-r from-green-500 to-blue-300 rounded-l-full rounded-r-full h-16 w-48 flex items-center'>Direction
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-auto mr-6 transform hover:translate-x-2 duration-200 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+  </svg>
+</button>
+
+  </div>
+</div>
+</div> -->
+
+<!-- end points  -->
+
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+</div>     
+
+
+
+</body>
+</html>
